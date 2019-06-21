@@ -164,7 +164,7 @@ const trivia = {
             trivia.correct++;
             clearInterval(trivia.timerId);
             resultId = setTimeout(trivia.answerResult, 1000);
-            $("#results").html("<h1>Correct Answer!</h1>");
+            $("#results").html("<h1>You anger Sauron with your correct answer!</h1>");
             console.log("this is me"+ resultId)
           }
           //if the user picks the wrong choice
