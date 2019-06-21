@@ -6,7 +6,7 @@ $(document).ready(function(){
     $("#remaining-time").hide();
     $("#start").on('click', trivia.startgame);
     $(document).on('click' , '.option', trivia.answerCheck);
-    console.log(startgame)
+    
   })
 
 

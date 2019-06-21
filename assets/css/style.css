@@ -1,0 +1,42 @@
+#start{
+    margin-left:500px;
+}
+.jumboheader{
+    text-align: center;
+    
+}
+#options{
+    margin-left:370px;
+    
+}
+
+#remaining-time{
+    text-align: center;
+    
+}
+#question{
+    text-align: center;
+    
+}
+.jumbotron{
+    margin-top:100px;
+   background-color:burlywood;
+   border-radius: 25px;
+   height:350px;
+}
+body{
+    background-image: url(/assets/images/ring.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#results{
+    text-align: center;
+   
+}
+.titleheader{
+    font-size: 75px;
+    color:white;
+    margin-top:50px;
+}
