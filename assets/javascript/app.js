@@ -59,9 +59,11 @@ const trivia = {
         trivia.incorrect = 0;
         trivia.unanswered = 0;
         clearInterval(trivia.timerId);
+        
+                trivia.whichQuestion();
         //showing the trivia 
         $(".trivia").show();
-
+        $('#game').show();
 
         //  empty last results
         $('#results').html('');
@@ -74,8 +76,6 @@ const trivia = {
 
         $('#remaining-time').show();
 
-
-        trivia.whichQuestion();
         
 
 
@@ -93,7 +93,8 @@ const trivia = {
         if (!trivia.timerOn) {
             trivia.timerId = setInterval(trivia.timerStarted, 1000);
         };
-
+        console.log("question number" + trivia.currentSet)
+        console.log(trivia.questions)
         //gathering questions and their current indexes
         var questionText = Object.values(trivia.questions)[trivia.currentSet];
         $("#question").text(questionText);
@@ -103,6 +104,7 @@ const trivia = {
 
         //accessing the array of options
         var questionChoices = Object.values(trivia.choices)[trivia.currentSet];
+        $("#options").empty(); 
 
         //displaying questions to html
         $.each(questionChoices, function (index, key) {
@@ -116,9 +118,14 @@ const trivia = {
 
     // method to decrement counter and count unanswered if timer runs out
     timerStarted: function () {
+
+        console.log("inside timer started function" + trivia.currentSet);
         if (trivia.timer > -1 && trivia.currentSet < Object.keys(trivia.questions).length) {
+            
             $("#timer").text(trivia.timer);
+            
             trivia.timer--;
+
             if (trivia.timer === 4) {
                 $("#timer").addClass("last-seconds");
                 console.log(trivia.timer)
